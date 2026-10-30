@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Moonlight Books - Realizar Pedido</title>
+</head>
+<body>
+    <h1>Moonlight Books</h1>
+    <h2>Formulario de Pedidos</h2>
+
+    <!-- Formulario con Web3Forms -->
+    <form action="https://api.web3forms.com/submit" method="POST">
+        
+        <!-- Campo oculto para la clave de acceso -->
+        <input type="hidden" name="access_key" value="8c2dbe9a-3bf6-4ee9-a3ae-191ac6aa9cfb">
+
+        <!-- Fieldset para información personal -->
+        <fieldset>
+            <legend>Datos Personales</legend>
+            
+            <p>
+                <label for="nombre">Nombre:</label><br />
+                <input type="text" id="nombre" name="nombre" required="required" />
+            </p>
+
+            <p>
+                <label for="correo">Correo electrónico:</label><br />
+                <input type="email" id="correo" name="correo" required="required" />
+            </p>
+        </fieldset>
+
+        <!-- Fieldset para detalles del pedido ampliado -->
+        <fieldset>
+            <legend>Detalles del Pedido</legend>
+
+            <!-- Lista desplegable -->
+            <p>
+                <label for="categoria">Categoría preferida:</label><br />
+                <select id="categoria" name="categoria">
+                    <option value="novelas">Novelas románticas</option>
+                    <option value="fantasia">Fantasía y aventuras</option>
+                    <option value="mangas">Mangas</option>
+                </select>
+            </p>
+
+            <!-- Botones de opción (Radio) -->
+            <p>
+                <label>Formato de entrega:</label><br />
+                <input type="radio" id="fisico" name="formato" value="fisico" checked="checked" />
+                <label for="fisico">Libro físico</label>
+                <input type="radio" id="digital" name="formato" value="digital" />
+                <label for="digital">Versión Digital</label>
+            </p>
+
+            <!-- Casilla de verificación (Checkbox) -->
+            <p>
+                <input type="checkbox" id="envoltorio" name="envoltorio_regalo" value="si" />
+                <label for="envoltorio">Solicitar empaque de regalo</label>
+            </p>
+
+            <!-- Área de texto -->
+            <p>
+                <label for="mensaje">Mensaje o comentarios:</label><br />
+                <textarea id="mensaje" name="mensaje" rows="4" cols="30"></textarea>
+            </p>
+        </fieldset>
+
+        <!-- Botones de envío y borrado -->
+        <p>
+            <button type="submit">Enviar pedido</button>
+            <button type="reset">Borrar formulario</button>
+        </p>
+    </form>
+</body>
+</html>
